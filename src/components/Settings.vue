@@ -2,7 +2,7 @@
   <v-card class="px-5">
     <v-row>
       <v-col>
-        <v-radio-group v-model="lang" row label="Language:">
+        <v-radio-group @change="returnNewData" v-model="lang" row label="Language:">
           <v-radio label="English" value="en"></v-radio>
           <v-radio label="Arabic" value="ar"></v-radio>
         </v-radio-group>
@@ -12,10 +12,10 @@
     <v-row>
       <v-col cols="8">
         <v-select
-          @change="checkIfAll"
+          @change="returnNewData"
           outlined
-          v-model="letter"
-          :items="letters"
+          v-model="letters"
+          :items="lettersItems"
           attach
           chips
           label="Letters"
@@ -23,7 +23,7 @@
         ></v-select>
       </v-col>
       <v-col cols="2">
-        <v-btn height="65" color="info">Reset</v-btn>
+        <v-btn @click="reset" height="65" color="info">Reset</v-btn>
       </v-col>
     </v-row>
   </v-card>
@@ -33,15 +33,21 @@
 export default {
   data: () => ({
     lang: "en",
-    letter: ["all"],
-    letters: "abcdefghijklmnopqrstuvwxyz".split("")
+    letters: ["all"],
+    lettersItems: "abcdefghijklmnopqrstuvwxyz".split("")
   }),
   created() {
-    this.letters.unshift("all");
+    this.lettersItems.unshift("all");
   },
   methods: {
-    checkIfAll() {
-      if (this.letter.includes("all")) this.letter = ["all"];
+    returnNewData() {
+      if (this.letters.includes("all")) this.letters = ["all"];
+      this.$emit("settingsChanged", { lang: this.lang, letters: this.letters });
+    },
+    reset() {
+      this.letters = ["all"];
+      this.lang = "en";
+      this.returnNewData();
     }
   }
 };

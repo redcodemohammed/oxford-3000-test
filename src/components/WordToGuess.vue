@@ -1,5 +1,16 @@
 <template>
   <v-card class="pa-5 text-center">
-    <p class="display-3">كلمة</p>
+    <p class="display-3">{{_word}}</p>
   </v-card>
 </template>
+<script>
+export default {
+  props: ["word"],
+  computed: {
+    _word() {
+      if (this.word) return this.word;
+      return "Loading...";
+    }
+  }
+};
+</script>
