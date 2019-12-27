@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
+  <v-app>
+    <nav>
+      <Navbar />
+    </nav>
 
+    <v-content class="ma-5">
+      <v-row>
+        <v-col>
+          <WordToGuess />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <TypingArea />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <Settings />
+        </v-col>
+      </v-row>
+    </v-content>
+  </v-app>
+</template>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from "@/components/Navbar.vue";
+import WordToGuess from "@/components/WordToGuess.vue";
+import TypingArea from "@/components/TypingArea.vue";
+import Settings from "@/components/Settings.vue";
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    Navbar,
+    WordToGuess,
+    TypingArea,
+    Settings
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
