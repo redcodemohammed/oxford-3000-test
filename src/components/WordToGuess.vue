@@ -1,5 +1,5 @@
 <template>
-  <v-card class="pa-5 text-center">
+  <v-card min-height="228" class="pa-5 text-center">
     <p class="display-3">{{_word}}</p>
   </v-card>
 </template>

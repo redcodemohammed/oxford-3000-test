@@ -3,26 +3,22 @@
     <nav>
       <Navbar />
     </nav>
-
     <v-content class="ma-5">
       <v-row>
-        <v-col>
+        <v-col cols="6" md="6" sm="12" xm="12">
           <WordToGuess :word="word" />
         </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
+
+        <v-col cols="6" md="6" sm="12" xm="12">
           <TypingArea @requestNewWord="handelNewWord" :answer="answer" :lang="lang" :word="word" />
         </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
+
+        <v-col cols="6" md="6" sm="12" xm="12">
           <Settings @settingsChanged="handelNewSettings" />
         </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <Say />
+
+        <v-col cols="6" md="6" sm="12" xm="12">
+          <Say :lang="lang" />
         </v-col>
       </v-row>
     </v-content>

@@ -8,7 +8,7 @@
           @keypress.enter="enter"
           v-model="inputAnswer"
           outlined
-          label="The Word"
+          label="Your Answer"
         ></v-text-field>
       </v-col>
       <v-col v-if="!hintBtn" class="mx-3" cols="2">
