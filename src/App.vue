@@ -10,7 +10,13 @@
         </v-col>
 
         <v-col cols="6" md="6" sm="12" xm="12">
-          <TypingArea @requestNewWord="handelNewWord" :answer="answer" :lang="lang" :word="word" />
+          <TypingArea
+            ref="typingArea"
+            @requestNewWord="handelNewWord"
+            :answer="answer"
+            :lang="lang"
+            :word="word"
+          />
         </v-col>
 
         <v-col cols="6" md="6" sm="12" xm="12">
@@ -67,6 +73,7 @@ export default {
       wordPromise.then(question => {
         this.word = question.word;
         this.answer = question.answer;
+        this.$refs.typingArea.$emit("showNextBtn");
       });
     }
   },

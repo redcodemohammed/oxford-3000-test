@@ -27,7 +27,7 @@
         </v-btn>
       </v-col>
       <v-col class="mx-3" cols="2">
-        <v-btn @click="next" height="55" dark>
+        <v-btn :disabled="!nextBtn" @click="next" height="55" dark>
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
       </v-col>
@@ -58,7 +58,8 @@ export default {
     histPostion: 1,
     hintMsg: "",
     showAnswer: false,
-    hintBtn: false
+    hintBtn: false,
+    nextBtn: true
   }),
   methods: {
     enter() {
@@ -76,6 +77,7 @@ export default {
       }
     },
     next() {
+      this.nextBtn = false;
       this.showAnswer = true;
       setTimeout(() => {
         this.hintBtn = false;
@@ -107,6 +109,11 @@ export default {
         this.next();
       }
     }
+  },
+  created() {
+    this.$on("showNextBtn", () => {
+      this.nextBtn = true;
+    });
   }
 };
 </script>
