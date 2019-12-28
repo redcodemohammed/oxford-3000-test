@@ -25,7 +25,6 @@ export default [
   "accompany",
   "according to",
   "account",
-  "account for",
   "accurate",
   "accurately",
   "accuse",
