@@ -11,22 +11,22 @@
           label="Your Answer"
         ></v-text-field>
       </v-col>
-      <v-col v-if="!hintBtn" class="mx-3" cols="2">
+      <v-col v-if="!hintBtn" class="ma-3" cols="2">
         <v-btn @click="showHint" height="55" dark>
           <v-icon>mdi-comment-question</v-icon>
         </v-btn>
       </v-col>
-      <v-col class="mx-3" cols="2">
+      <v-col class="ma-3" cols="2">
         <v-btn @click="say" height="55" dark>
           <v-icon>mdi-volume-high</v-icon>
         </v-btn>
       </v-col>
-      <v-col class="mx-3" cols="2">
+      <v-col class="ma-3" cols="2">
         <v-btn @click="saySlow" height="55" dark>
           <v-icon>mdi-speedometer-slow</v-icon>
         </v-btn>
       </v-col>
-      <v-col class="mx-3" cols="2">
+      <v-col class="ma-3" cols="2">
         <v-btn :disabled="!nextBtn" @click="next" height="55" dark>
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
