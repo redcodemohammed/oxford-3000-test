@@ -57,7 +57,7 @@ export default {
   }),
   methods: {
     enter() {
-      if (this.answer !== this.inputAnswer) {
+      if (this.answer !== this.inputAnswer.toLowerCase()) {
         this.error = true;
         this.success = false;
         this.errorSound.play();
