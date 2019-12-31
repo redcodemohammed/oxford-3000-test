@@ -1,8 +1,5 @@
 <template>
   <v-card min-height="236" class="pa-5">
-     <v-card-title>
-      Word To Guess
-     </v-card-title>
     <v-row align="start" justify="center">
       <v-col cols="12">
         <v-text-field @keypress.enter="enter" v-model="word" outlined label="The Word"></v-text-field>
