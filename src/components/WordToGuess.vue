@@ -1,6 +1,8 @@
 <template>
   <v-card class="pa-5 text-center">
-    <p class="display-4">{{_word}}</p>
+  <blockquote class="blockquote">
+    {{_word}}
+  </blockquote>
   </v-card>
 </template>
 <script>
