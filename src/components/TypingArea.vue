@@ -11,26 +11,20 @@
           label="Your Answer"
         ></v-text-field>
       </v-col>
-      <v-col v-if="!hintBtn" class="ma-3" cols="2">
-        <v-btn @click="showHint" height="55" dark>
+      <v-btn-toggle>
+        <v-btn v-if="!hintBtn" @click="showHint" height="55" dark>
           <v-icon>mdi-comment-question</v-icon>
         </v-btn>
-      </v-col>
-      <v-col class="ma-3" cols="2">
         <v-btn @click="say" height="55" dark>
           <v-icon>mdi-volume-high</v-icon>
         </v-btn>
-      </v-col>
-      <v-col class="ma-3" cols="2">
         <v-btn @click="saySlow" height="55" dark>
           <v-icon>mdi-speedometer-slow</v-icon>
         </v-btn>
-      </v-col>
-      <v-col class="ma-3" cols="2">
         <v-btn :disabled="!nextBtn" @click="next" height="55" dark>
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
-      </v-col>
+</v-btn-toggle>
     </v-row>
     <v-snackbar v-model="hint" color="info" left multi-line :timeout="2000" top>
       {{ hintMsg }}
