@@ -55,7 +55,7 @@ export default {
       let letters = this.lettersItems;
       letters.unshift("all");
       let selLetters = this.letters;
-      return selLetters[0] === "all" ? ["all"] : letters;
+      return selLetters.includes("all") ? ["all"] : letters;
     }
   }
 };
