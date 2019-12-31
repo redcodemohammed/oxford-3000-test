@@ -6,10 +6,10 @@
       </v-col>
       <v-btn-toggle>
         <v-btn :disabled="!word" @click="say">
-          <v-icon>mdi-volume-high</v-icon>
+          <span>Spell</span>
         </v-btn>
         <v-btn :disabled="!word" @click="saySlow">
-          <v-icon>mdi-speedometer-slow</v-icon>
+          <span>Spell Slowly</span>
         </v-btn>
         <v-btn :loading="loading" :disabled="!word" @click="translate">
           <v-icon>mdi-translate</v-icon>
