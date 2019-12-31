@@ -15,8 +15,11 @@
           <v-icon>mdi-translate</v-icon>
         </v-btn>
       </v-btn-toggle>
-      <p>Note: Text to speech won't work for arabic words</p>
-    </v-row>
+</v-row>
+<v-row>
+      <p class="ma-3">Note: Text to speech won't work for arabic words</p>
+    
+</v-row>
     <v-snackbar v-model="translation" color="secondary" left multi-line :timeout="6000" top>
       {{ translationResult }}
       <v-btn dark text @click="translation = false">Close</v-btn>
