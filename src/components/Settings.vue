@@ -18,7 +18,7 @@
           @change="returnNewData"
           outlined
           v-model="letters"
-          :items="lettersItems"
+          :items="items"
           attach
           chips
           label="Letters"
