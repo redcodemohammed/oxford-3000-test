@@ -14,18 +14,18 @@
       <v-btn-toggle>
         <v-btn v-if="!hintBtn" @click="showHint">
          
-             <v-icon right>mdi-comment-question</v-icon>
+             <v-icon>mdi-comment-question</v-icon>
           
       
-          <span left>Hint</span>
+          
           
 </v-btn>
         <v-btn @click="say">
           <v-icon>mdi-volume-high</v-icon>
         </v-btn>
         <v-btn @click="saySlow">
-          <v-icon right>mdi-volume-high</v-icon>
-          <span left>Slow</span>
+          
+          <span>Slow</span>
         </v-btn>
         <v-btn :disabled="!nextBtn" @click="next">
           <span>Next</span>
