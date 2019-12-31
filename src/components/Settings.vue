@@ -5,7 +5,7 @@
   </v-card-title>
     <v-row>
       <v-col>
-        <v-radio-group @change="returnNewData" v-model="lang" row label="Language:">
+        <v-radio-group @change="returnNewData" v-model="lang" label="Language:">
           <v-radio label="English" value="en"></v-radio>
           <v-radio label="Arabic" value="ar"></v-radio>
         </v-radio-group>
