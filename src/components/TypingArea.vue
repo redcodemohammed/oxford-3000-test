@@ -13,21 +13,16 @@
       </v-col>
       <v-btn-toggle>
         <v-btn v-if="!hintBtn" @click="showHint">
-          <p>
-             <v-icon>mdi-comment-question</v-icon>
-          </p>
-          <p>
-          <span bottom>Hint</span>
-          </p>
+          <span>Hint</span>
 </v-btn>
         <v-btn @click="say">
-          <v-icon>mdi-volume-high</v-icon>
+          <span>Spell</span>
         </v-btn>
         <v-btn @click="saySlow">
-          <v-icon>mdi-speedometer-slow</v-icon>
+          <span>Spell slowly</span>
         </v-btn>
         <v-btn :disabled="!nextBtn" @click="next">
-          <v-icon>mdi-chevron-right</v-icon>
+          <span>Next</span>
         </v-btn>
 </v-btn-toggle>
     </v-row>
