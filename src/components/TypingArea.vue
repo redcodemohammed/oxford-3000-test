@@ -12,16 +12,16 @@
         ></v-text-field>
       </v-col>
       <v-btn-toggle>
-        <v-btn v-if="!hintBtn" @click="showHint" height="55" dark>
+        <v-btn v-if="!hintBtn" @click="showHint">
           <v-icon>mdi-comment-question</v-icon>
         </v-btn>
-        <v-btn @click="say" height="55" dark>
+        <v-btn @click="say">
           <v-icon>mdi-volume-high</v-icon>
         </v-btn>
-        <v-btn @click="saySlow" height="55" dark>
+        <v-btn @click="saySlow">
           <v-icon>mdi-speedometer-slow</v-icon>
         </v-btn>
-        <v-btn :disabled="!nextBtn" @click="next" height="55" dark>
+        <v-btn :disabled="!nextBtn" @click="next">
           <v-icon>mdi-chevron-right</v-icon>
         </v-btn>
 </v-btn-toggle>
