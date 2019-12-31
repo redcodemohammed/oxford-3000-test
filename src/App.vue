@@ -4,6 +4,7 @@
       <Navbar />
     </nav>
     <v-content class="ma-5">
+    <v-container>
       <v-row>
         <v-col cols="6" md="6" sm="12" xm="12">
           <WordToGuess :word="word" />
@@ -27,6 +28,7 @@
           <Say :lang="lang" />
         </v-col>
       </v-row>
+      </v-container>
     </v-content>
   </v-app>
 </template>
