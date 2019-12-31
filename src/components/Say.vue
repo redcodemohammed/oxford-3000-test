@@ -4,21 +4,17 @@
       <v-col cols="12">
         <v-text-field @keypress.enter="enter" v-model="word" outlined label="The Word"></v-text-field>
       </v-col>
-      <v-col class="mx-3" cols="2">
-        <v-btn :disabled="!word" @click="say" height="55" dark>
+      <v-btn-toggle>
+        <v-btn :disabled="!word" @click="say">
           <v-icon>mdi-volume-high</v-icon>
         </v-btn>
-      </v-col>
-      <v-col class="mx-3" cols="2">
-        <v-btn :disabled="!word" @click="saySlow" height="55" dark>
+        <v-btn :disabled="!word" @click="saySlow">
           <v-icon>mdi-speedometer-slow</v-icon>
         </v-btn>
-      </v-col>
-      <v-col class="mx-3" cols="2">
-        <v-btn :loading="loading" @click="translate" height="55" dark>
+        <v-btn :loading="loading" @click="translate">
           <v-icon>mdi-translate</v-icon>
         </v-btn>
-      </v-col>
+      </v-btn-toggle>
       <p>Note: Text to speech won't work for arabic words</p>
     </v-row>
     <v-snackbar v-model="translation" color="secondary" left multi-line :timeout="6000" top>
