@@ -39,9 +39,6 @@ export default {
     letters: ["all"],
     lettersItems: "abcdefghijklmnopqrstuvwxyz".split("")
   }),
-  created() {
-    this.lettersItems.unshift("all");
-  },
   methods: {
     returnNewData() {
       if (this.letters.includes("all")) this.letters = ["all"];
@@ -51,6 +48,14 @@ export default {
       this.letters = ["all"];
       this.lang = "en";
       this.returnNewData();
+    }
+  },
+  computed:{
+    items(){
+      let letters = this.lettersItems;
+      letters.unshift("all");
+      let selLetters = this.letters;
+      return selLetters[0] === "all" ? ["all"] : letters;
     }
   }
 };
