@@ -14,6 +14,7 @@
       <v-btn-toggle>
         <v-btn v-if="!hintBtn" @click="showHint">
           <v-icon>mdi-comment-question</v-icon>
+          <span bottom>Hint</hint>
         </v-btn>
         <v-btn @click="say">
           <v-icon>mdi-volume-high</v-icon>
