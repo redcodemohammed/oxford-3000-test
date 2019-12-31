@@ -13,13 +13,19 @@
       </v-col>
       <v-btn-toggle>
         <v-btn v-if="!hintBtn" @click="showHint">
-          <span>Hint</span>
+         
+             <v-icon right>mdi-comment-question</v-icon>
+          
+      
+          <span left>Hint</span>
+          
 </v-btn>
         <v-btn @click="say">
-          <span>Spell</span>
+          <v-icon>mdi-volume-high</v-icon>
         </v-btn>
         <v-btn @click="saySlow">
-          <span>Spell slowly</span>
+          <v-icon right>mdi-volume-high</v-icon>
+          <span left>Slow</span>
         </v-btn>
         <v-btn :disabled="!nextBtn" @click="next">
           <span>Next</span>
@@ -39,7 +45,6 @@
 
 <script>
 import tts from "../plugins/tts";
-
 export default {
   props: ["answer", "lang", "word"],
   data: () => ({
