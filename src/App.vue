@@ -6,11 +6,11 @@
     <v-content class="ma-5">
     <v-container>
       <v-row>
-        <v-col cols="6" md="6" sm="12" xm="12">
+        <v-col cols="6" md="12" sm="12" xm="12">
           <WordToGuess :word="word" />
         </v-col>
 
-        <v-col cols="6" md="6" sm="12" xm="12">
+        <v-col cols="6" md="12" sm="12" xm="12">
           <TypingArea
             ref="typingArea"
             @requestNewWord="handelNewWord"
@@ -20,11 +20,11 @@
           />
         </v-col>
 
-        <v-col cols="6" md="6" sm="12" xm="12">
+        <v-col cols="6" md="12" sm="12" xm="12">
           <Settings @settingsChanged="handelNewSettings" />
         </v-col>
 
-        <v-col cols="6" md="6" sm="12" xm="12">
+        <v-col cols="6" md="12" sm="12" xm="12">
           <Say :lang="lang" />
         </v-col>
       </v-row>
