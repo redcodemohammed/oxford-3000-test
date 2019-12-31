@@ -13,9 +13,13 @@
       </v-col>
       <v-btn-toggle>
         <v-btn v-if="!hintBtn" @click="showHint">
-          <v-icon>mdi-comment-question</v-icon>
+          <v-row>
+             <v-icon>mdi-comment-question</v-icon>
+          </v-row>
+          <v-row>
           <span bottom>Hint</span>
-        </v-btn>
+          </v-row>
+</v-btn>
         <v-btn @click="say">
           <v-icon>mdi-volume-high</v-icon>
         </v-btn>
