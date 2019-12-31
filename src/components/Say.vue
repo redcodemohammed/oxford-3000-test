@@ -11,7 +11,7 @@
         <v-btn :disabled="!word" @click="saySlow">
           <v-icon>mdi-speedometer-slow</v-icon>
         </v-btn>
-        <v-btn :loading="loading" @click="translate">
+        <v-btn :loading="loading" :disabled="!word" @click="translate">
           <v-icon>mdi-translate</v-icon>
         </v-btn>
       </v-btn-toggle>
