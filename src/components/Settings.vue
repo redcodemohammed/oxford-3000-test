@@ -1,5 +1,8 @@
 <template>
   <v-card class="px-5">
+  <v-card-title>
+   Setttings
+  </v-card-title>
     <v-row>
       <v-col>
         <v-radio-group @change="returnNewData" v-model="lang" row label="Language:">
