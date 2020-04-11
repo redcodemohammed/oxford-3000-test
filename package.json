@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "basic-tts": "^1.0.4",
-    "core-js": "^3.4.3",
+    "core-js": "^3.6.5",
     "vue": "^2.6.10",
     "vuetify": "^2.1.0",
     "yandex-translate": "^2.1.3"
